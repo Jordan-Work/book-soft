@@ -1,13 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import MOCK_DATA from "../MOCK_DATA.json";
-
-interface BookDetails {
-  id: string;
-  imageLink: string;
-  category: string;
-  title: string;
-  price: string;
-}
+import { BookDetails } from "../types/types";
 
 const BookContext = createContext({
   updateBook: (oldBookData, newBookData) => null,
@@ -21,15 +14,12 @@ export const BookDataProvider = ({ children }) => {
 
   useEffect(() => {
     setBookData(MOCK_DATA);
-    console.log(bookData);
   }, []);
 
   const updateBook = (oldBookData: BookDetails, newBookData: BookDetails) => {
-    console.log("called", bookData, oldBookData, newBookData);
     if (!bookData.length) {
       return;
     }
-    // ...bookData
     const updatedBookData = [...bookData];
     const bookIndex = updatedBookData.findIndex(
       (f) => f.title === oldBookData.title
@@ -43,7 +33,6 @@ export const BookDataProvider = ({ children }) => {
     updatedBookData[bookIndex].price = newBookData.price
       ? newBookData.price
       : updatedBookData[bookIndex].price;
-    console.log(updatedBookData, "updatedBookData");
 
     setBookData(updatedBookData);
   };

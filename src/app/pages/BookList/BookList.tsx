@@ -20,7 +20,6 @@ interface BookList {
 export const BookList = () => {
   const { bookData: books } = useBookData();
   const [popup, setPopup] = useState({ details: {}, show: false, add: false });
-  console.log(books, "books");
 
   const showDetails = (book: BookDetails) => {
     setPopup({ show: true, details: book });

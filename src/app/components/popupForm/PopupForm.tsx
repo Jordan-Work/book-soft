@@ -1,26 +1,8 @@
 "use client";
 import { useBookData } from "@/app/hooks/BookData";
+import { BookDetails } from "@/app/types/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-interface FormDetails {
-  label: "Name" | "Price" | "Category";
-  value: number | string;
-  validateEmpty: boolean;
-}
-
-interface Form {
-  image?: string;
-  alt?: string;
-  details: FormDetails[];
-}
-interface BookDetails {
-  id: string;
-  imageLink: string;
-  category: string;
-  title: string;
-  price: string;
-}
 
 interface PopupFormProps {
   popupDetails: BookDetails;
@@ -48,13 +30,11 @@ export const PopupForm = ({
   const { updateBook, deleteBook, addBook } = useBookData();
 
   useEffect(() => {
-    console.log("form");
     setForm(defaultForm);
   }, [popupDetails]);
 
   const handleChange = (e) => {
     e.preventDefault();
-    console.log(e.target.name, "form values");
     if (e.target.name === "price") {
       e.target.value = e.target.value
         .replace(/[^0-9.]/g, "")
@@ -64,7 +44,6 @@ export const PopupForm = ({
   };
 
   const handleSave = (e) => {
-    console.log("testing", form);
     e.preventDefault();
     updateBook(popupDetails, form);
     hidePopup();
@@ -145,7 +124,6 @@ export const PopupForm = ({
                             placeholder={popupDetails.price}
                             onChange={(e) => handleChange(e)}
                             value={form.price}
-                            // onChange={(e) => book.label === "Price" ? numberValidate(e) : null}
                           />
                         </div>
                         <div className="mb-4">
@@ -159,7 +137,6 @@ export const PopupForm = ({
                             placeholder={popupDetails.category}
                             onChange={(e) => handleChange(e)}
                             value={form.category}
-                            // onChange={(e) => book.label === "Price" ? numberValidate(e) : null}
                           />
                         </div>
 
