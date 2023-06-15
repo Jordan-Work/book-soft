@@ -16,17 +16,28 @@ interface BookDetails {
 interface BookList {
   books: BookDetails[];
 }
+const defaultForm = {
+  id: "",
+  imageLink: "",
+  category: "",
+  title: "",
+  price: "",
+};
 
 export const BookList = () => {
   const { bookData: books } = useBookData();
-  const [popup, setPopup] = useState({ details: {}, show: false, add: false });
+  const [popup, setPopup] = useState({
+    details: defaultForm,
+    show: false,
+    add: false,
+  });
 
   const showDetails = (book: BookDetails) => {
-    setPopup({ show: true, details: book });
+    setPopup({ ...popup, show: true, details: book });
   };
 
   const hidePopup = () => {
-    setPopup({ show: false, details: [] });
+    setPopup({ ...popup, show: false });
   };
 
   return (

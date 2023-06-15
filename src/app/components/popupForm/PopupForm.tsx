@@ -1,13 +1,18 @@
 "use client";
 import { useBookData } from "@/app/hooks/BookData";
-import { BookDetails } from "@/app/types/types";
+import {
+  BookDetails,
+  ButtonEvent,
+  FormEvent,
+  InputEvent,
+} from "@/app/types/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface PopupFormProps {
   popupDetails: BookDetails;
   showPopup: boolean;
-  hidePopup;
+  hidePopup: () => void;
   add: boolean;
 }
 
@@ -33,7 +38,7 @@ export const PopupForm = ({
     setForm(defaultForm);
   }, [popupDetails]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: InputEvent) => {
     e.preventDefault();
     if (e.target.name === "price") {
       e.target.value = e.target.value
@@ -43,13 +48,13 @@ export const PopupForm = ({
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSave = (e) => {
+  const handleSave = (e: FormEvent) => {
     e.preventDefault();
     updateBook(popupDetails, form);
     hidePopup();
   };
 
-  const handleAdd = (e) => {
+  const handleAdd = (e: FormEvent) => {
     e.preventDefault();
     if (!form.title) {
       hidePopup();
@@ -60,7 +65,7 @@ export const PopupForm = ({
     hidePopup();
   };
 
-  const handleDelete = (e) => {
+  const handleDelete = (e: InputEvent | ButtonEvent) => {
     e.preventDefault();
     deleteBook(popupDetails);
     hidePopup();

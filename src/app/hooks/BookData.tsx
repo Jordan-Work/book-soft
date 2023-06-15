@@ -3,13 +3,13 @@ import MOCK_DATA from "../MOCK_DATA.json";
 import { BookDetails } from "../types/types";
 
 const BookContext = createContext({
-  updateBook: (oldBookData, newBookData) => null,
-  deleteBook: (book) => null,
-  addBook: (book) => null,
+  updateBook: (oldBookData: BookDetails, newBookData: BookDetails) => {},
+  deleteBook: (book: BookDetails) => {},
+  addBook: (book: BookDetails) => {},
   bookData: [] as BookDetails[],
 });
 
-export const BookDataProvider = ({ children }) => {
+export const BookDataProvider = ({ children }: any) => {
   const [bookData, setBookData] = useState([...MOCK_DATA] as BookDetails[]);
 
   useEffect(() => {
