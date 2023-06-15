@@ -1,0 +1,72 @@
+[
+  { 
+    "id": "001",
+    "imageLink": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "category": "Historical Fiction",
+    "title": "Things Fall Apart",
+    "price": "12.95"
+  },
+  {
+    "id": "002",
+    "imageLink": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "category": "Adventure",
+    "title": "Fairy tales",
+    "price": "15.95"
+  },
+  {
+    "id": "003",
+    "imageLink": "https://images.unsplash.com/photo-1488686963517-9bb114452062?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+    "category": "Adventure",
+    "title": "The Horse and His Boy",
+    "price": "19.95"
+  },
+  {
+    "id": "004",
+    "imageLink": "https://images.unsplash.com/photo-1476275466078-4007374efbbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2258&q=80",
+    "category": "Adventure",
+    "title": "Chronicles Of Narnia",
+    "price": "18.95"
+  },
+  {
+    "id": "005",
+    "imageLink": "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=985&q=80",
+    "category": "Religious text",
+    "title": "The Book Of Job",
+    "price": "15.50"
+  },
+  {
+    "id": "006",
+    "imageLink": "https://images.unsplash.com/photo-1562232573-0305012a8818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80",
+    "category": "Drama",
+    "title": "One Thousand and One Nights",
+    "price": "11.95"
+  },
+  {
+    "id": "007",
+    "imageLink": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80",
+    "category": "Comming Of Age",
+    "title": "The Golden Finch",
+    "price": "25.50"
+  },
+  {
+    "id": "008",
+    "imageLink": "https://images.unsplash.com/photo-1467951591042-f388365db261?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
+    "category": "Adventure",
+    "title": "Pride and Prejudice",
+    "price": "25.40"
+  },
+  {
+    "id": "009",
+    "imageLink": "https://images.unsplash.com/photo-1554672053-c4205442a9fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80",
+    "category": "playwright",
+    "title": "Le Pere Goriot",
+    "price": "12.15"
+  },
+  {
+    "id": "010",
+    "imageLink": "https://images.unsplash.com/photo-1599893242842-1b723407f8c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2369&q=80",
+    "category": "Adventure",
+    "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
+    "price": "32.40"
+  }
+  ]
