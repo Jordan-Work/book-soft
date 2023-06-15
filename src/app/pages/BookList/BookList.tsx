@@ -49,7 +49,7 @@ export const BookList = () => {
       >
         Add Book
       </button>
-      <div className="flex flex-col">
+      <div className="flex flex-col cursor-pointer">
         {books.map((book: BookDetails, i: number) => (
           <div
             key={book.id}
@@ -72,7 +72,7 @@ export const BookList = () => {
 
             <div
               key={`${book.id}-${i}`}
-              className="flex flex-col sm:ml-2 ml-[50%] 2xl:ml-[60%]"
+              className="flex flex-col sm:ml-[13%] ml-2 2xl:ml-[60%]"
             >
               <h1 className="p-2 text-3xl">
                 <strong>{book.title}</strong>
